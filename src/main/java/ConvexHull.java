@@ -4,20 +4,7 @@ import java.util.List;
 
 public class ConvexHull {
 
-    public static void main(String[] args) {
-        Point one = new Point(1, 2);
-        Point two = new Point(-2, 4);
-        Point three = new Point(-3, 12);
-        Point four = new Point(4, -16);
-        Point five = new Point(4, -16);
-        List<Point> points = new ArrayList<>();
-        points.add(one);
-        points.add(two);
-        points.add(three);
-        points.add(four);
-        List<Point> convexHull = findConvexHull(points);
-    }
-
+    // O(nlogn)
     public static List<Point> findConvexHull(List<Point> points) {
         if (points == null || points.size() < 3) {
             return points;
